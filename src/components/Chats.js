@@ -37,7 +37,7 @@ const Chats = () => {
             .catch(() => {
                 let formdata = new FormData();
                 formdata.append('email', user.email);
-                formdata.append('username', user.email.substring(0, 4));
+                formdata.append('username', user.email);
                 formdata.append('secret', user.uid);
                 getFile(user.photoURL).then((avatar) => {
                     formdata.append('avatar', avatar, avatar.name);
